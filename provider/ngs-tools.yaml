@@ -1,0 +1,17 @@
+identity:
+  author: highwayns
+  name: ngs-tools
+  label:
+    en_US: ngs-tools
+    zh_Hans: ngs-tools
+    pt_BR: ngs-tools
+  description:
+    en_US: tools for ngs
+    zh_Hans: tools for ngs
+    pt_BR: tools for ngs
+  icon: icon.svg
+tools:
+  - tools/ngs-tools.yaml
+extra:
+  python:
+    source: provider/ngs-tools.py
