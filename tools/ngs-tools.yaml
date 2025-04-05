@@ -5,26 +5,51 @@ identity:
     en_US: ngs-tools
     zh_Hans: ngs-tools
     pt_BR: ngs-tools
+
 description:
   human:
     en_US: tools for ngs
     zh_Hans: tools for ngs
     pt_BR: tools for ngs
   llm: tools for ngs
+
 parameters:
-  - name: query
+  - name: url
     type: string
     required: true
     label:
-      en_US: Query string
-      zh_Hans: 查询语句
-      pt_BR: Query string
+      en_US: image url
+      zh_Hans: 本地图片链接
+      pt_BR: image url
     human_description:
       en_US: tools for ngs
       zh_Hans: tools for ngs
       pt_BR: tools for ngs
     llm_description: tools for ngs
     form: llm
+
+outputs:
+  - name: from_html
+    type: boolean
+    label:
+      en_US: From HTML
+      zh_Hans: 是否来自HTML页面
+  - name: original_url
+    type: string
+    label:
+      en_US: Original URL
+      zh_Hans: 原始链接
+  - name: extracted_image_url
+    type: string
+    label:
+      en_US: Extracted Image URL
+      zh_Hans: 提取的图片链接
+  - name: result
+    type: string
+    label:
+      en_US: Base64 Image Data URL
+      zh_Hans: 图片的Base64编码
+
 extra:
   python:
     source: tools/ngs-tools.py
