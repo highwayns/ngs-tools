@@ -4,7 +4,7 @@ from typing import Any
 
 from dify_plugin import Tool
 from dify_plugin.entities.tool import ToolInvokeMessage
-from readimage import readimage
+from .readimage import readimage
 
 class NgsToolsTool(Tool):
     def _invoke(self, tool_parameters: dict[str, Any]) -> Generator[ToolInvokeMessage]:
@@ -21,12 +21,7 @@ class NgsToolsTool(Tool):
 
         try:
             result = readimage(url)  # 调用你的图片处理函数
-            yield self.create_json_message({
-                "from_html": result["from_html"],
-                "original_url": result["original_url"],
-                "extracted_image_url": result["extracted_image_url"],
-                "result": result["result"],
-            })
+            yield self.create_text_message(result["result"])
 
         except Exception as e:
             yield self.create_text_message(f"处理图片时出错: {str(e)}")

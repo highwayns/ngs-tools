@@ -27,29 +27,6 @@ parameters:
       pt_BR: tools for ngs
     llm_description: tools for ngs
     form: llm
-
-outputs:
-  - name: from_html
-    type: boolean
-    label:
-      en_US: From HTML
-      zh_Hans: 是否来自HTML页面
-  - name: original_url
-    type: string
-    label:
-      en_US: Original URL
-      zh_Hans: 原始链接
-  - name: extracted_image_url
-    type: string
-    label:
-      en_US: Extracted Image URL
-      zh_Hans: 提取的图片链接
-  - name: result
-    type: string
-    label:
-      en_US: Base64 Image Data URL
-      zh_Hans: 图片的Base64编码
-
 extra:
   python:
     source: tools/ngs-tools.py

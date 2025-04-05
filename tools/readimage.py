@@ -56,7 +56,7 @@ def readimage(image_url: str) -> dict:
 # ✅ 加入 main 函数用于测试
 if __name__ == "__main__":
     # 你可以替换成任意 HTML 页面或图片的 URL
-    test_url = "http://localhost/files/8f3af89e-ac45-44bb-b890-e82af60067d2/file-preview?timestamp=1743825838&nonce=4a10c223e5d4016cd347b1b050676c1f&sign=3tNQ4uTIgDYGvOJ5wZS9NZpJ2VtF7QMamMs4LFGr4l8="  # HTML 页面中包含 logo 图片
+    test_url = "http://jp.highwayns.com/wp/wp-content/themes/biz-vektor/images/headers/bussines_desk_01.jpg"  # HTML 页面中包含 logo 图片
     try:
         result = readimage(test_url)
         print("\n=== 图片处理结果 ===")
