@@ -16,7 +16,7 @@ class NgsToolsTool(Tool):
 
         # 如果传入的是相对路径，可拼接 base
         if not url.startswith("http"):
-            base_url = "http://localhost"  # 可替换为你实际部署的前缀
+            base_url = "http://api:5001"  # 可替换为你实际部署的前缀
             url = base_url.rstrip("/") + "/" + url.lstrip("/")
 
         try:
